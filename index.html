@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/scripts.js" type="module"></script>
+    <title>Parcial - Guido Sosa Stillante</title>
+</head>
+
+<body>
+
+        <header>
+            <nav>
+                <img src="./imgs/Logo veterinaria pet shop rustico blanco y negro.png" alt="Logo Empresa" id="logo">
+                <ul class="nav-content">
+                    <li> <a href="./pages/nosotros.html">Nosotros</a> </li>
+                    <li> <a href="./pages/anuncio.html">Anuncio</a> </li>
+                    <li> <a href="./pages/blog.html">Blog</a> </li>
+                    <li> <a href="./pages/contacto.html">Contacto</a> </li>
+                </ul>
+            </nav>
+            
+            <section>
+                <div class="container">
+                    <h1 class="titulo">Administracion</h1>
+                    <div class="backgroundImg"></div>
+                </div>
+            </section>
+        </header>
+        
+        <main>
+            <fieldset>
+                <legend>Información del Anuncio</legend>
+                <form>
+                    <input type="hidden" name="formId" id="id">
+                    
+                    <label for="txtTitulo">titulo</label> <br>
+                    <input type="text" id="txtTitulo" name="txtTitulo" placeholder="Ingrese el titulo" required> <br>
+                    
+                    <label for="sctAnimal">Animal</label> <br> <br>
+                    <label> Perro <input type="radio" name="sctAnimal" value="Perro" checked/></label>
+                    <label> Gato <input type="radio" name="sctAnimal" value="Gato"/></label>
+
+                    <label for="txtDesc">descripcion</label> <br>
+                    <input type="text" id="txtDesc" name="txtDesc" placeholder="Ingrese la descripcion" required>
+                    
+                    <label for="numPrecio">precio</label> <br>
+                    <input type="number" id="numPrecio" name="numPrecio" placeholder="Ingrese el precio" min="1500"
+                    max="100000" value="1500" required>
+                    
+                    <div class="icons">
+                        <span><img src="./imgs/dogpawprint_89239.png" alt="Icon Raza"></span>
+                        <input type="text" name="txtRaza" id="txtRaza" min="2" placeholder="Raza"
+                        class="inputIcon" required>
+                        
+                        <span><img src="./imgs/baby_bottle_outline_icon_139937.png" alt="Icon Nacimiento"></span>
+                        <input type="date" name="txtFecha" id="txtFecha" placeholder="Fecha de nacimiento"  class="inputIcon" required>
+                        
+                        <span><img src="./imgs/health_healthcare_medic_medical_medicine_syringe_vaccine_icon_127255.png" alt="Icon Vacuna"></span>
+                        <select name="sctVacuna" id="sctVacuna">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    
+                </fieldset>
+                
+                <button type="submit" id="btnSubmit" class="formButtons">
+                    <span><img src="./imgs/source_icons_save-floppy-disk.svg" alt="" id="icon"></span>
+                    Guardar
+                </button>
+                <button type="reset" id="btnCancelar" class="formButtons">
+                    <span><img src="./imgs/source_icons_cancel.svg" alt=""></span>
+                    Cancelar
+                </button>
+                <button type="submit" id="btnActualizar" class="formButtons hidden">
+                    <span><img src="./imgs/source_icons_upload-square-outline.svg" alt=""></span>
+                    Actualizar
+                </button>
+                <button type="button" id="btnEliminar" class="formButtons hidden">
+                    <span><img src="./imgs/source_icons_trash.svg" alt=""></span>
+                    Eliminar
+                </button>
+            </form>
+            
+            <div id="spinner">
+                
+            </div>
+            
+            <section>
+                <div id="divTabla">
+                    
+                </div>
+            </section>
+
+            <a href="./pages/mainpage.html" class="mainPage">Ir a la Pagina Principal</a>
+            
+            <footer>
+                <nav>
+                    <img src="./imgs/Logo veterinaria pet shop rustico blanco y negro.png" alt="Logo Empresa" id="logo">
+                    <p id="copyright"> <i> Todos nuestros derechos reservados &copy; </i> </p>
+                    <ul>
+                        <li> <a href="./pages/nosotros.html">Nosotros</a> </li>
+                        <li> <a href="./pages/anuncio.html">Anuncio</a> </li>
+                        <li> <a href="./pages/blog.html">Blog</a> </li>
+                        <li> <a href="./pages/contacto.html">Contacto</a> </li>
+                    </ul>
+                </nav>
+            </footer>
+            
+            
+        </main>
+
+    </body>
+    
+    </html>

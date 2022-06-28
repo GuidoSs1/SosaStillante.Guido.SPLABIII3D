@@ -1,0 +1,70 @@
+{
+  "anuncios": [
+    {
+      "id": 1,
+      "titulo": "perro labrador",
+      "transaccion": "venta",
+      "descripcion": "cacho",
+      "precio": "1500",
+      "animal": "Perro",
+      "raza": "labrador",
+      "fecha_nacimiento": "2001-09-21",
+      "vacuna": "Si"
+    },
+    {
+      "id": 2,
+      "titulo": "gato loco",
+      "transaccion": "venta",
+      "descripcion": "gato",
+      "precio": "1500",
+      "animal": "Perro",
+      "raza": "siberiano",
+      "fecha_nacimiento": "2222-12-12",
+      "vacuna": "No"
+    },
+    {
+      "id": 3,
+      "titulo": "hola",
+      "transaccion": "venta",
+      "descripcion": "hola",
+      "precio": "1500",
+      "animal": "Gato",
+      "raza": "hola",
+      "fecha_nacimiento": "2200-12-22",
+      "vacuna": "Si"
+    },
+    {
+      "id": 4,
+      "titulo": "peroo",
+      "transaccion": "venta",
+      "descripcion": "pero perdon",
+      "precio": "1500",
+      "animal": "Perro",
+      "raza": "salvador",
+      "fecha_nacimiento": "1111-01-11",
+      "vacuna": "No"
+    },
+    {
+      "id": 5,
+      "titulo": "fsdfsdf",
+      "transaccion": "venta",
+      "descripcion": "fsdfsdf",
+      "precio": "1500",
+      "animal": "Gato",
+      "raza": "sdfsdfsd",
+      "fecha_nacimiento": "3333-03-31",
+      "vacuna": "No"
+    },
+    {
+      "id": 6,
+      "titulo": "fdgsdfgd",
+      "transaccion": "venta",
+      "descripcion": "gdfgg",
+      "precio": "1500",
+      "animal": "Perro",
+      "raza": "dffddfd",
+      "fecha_nacimiento": "0111-03-31",
+      "vacuna": "No"
+    }
+  ]
+}

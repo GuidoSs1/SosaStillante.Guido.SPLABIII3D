@@ -25,7 +25,6 @@ function createThead(data) {
 }
 
 function createTbody(data) {
-    console.log(data);
     const tbody = document.createElement("tbody");
     const values = Object.values(data);
     const tr = document.createElement("tr");
@@ -36,11 +35,13 @@ function createTbody(data) {
             td.textContent = item;
             tr.appendChild(td);
         } else {
-            tr.setAttribute("id", item);
+            tr.setAttribute("id", item); //Si es el id, lo pongo como atributo de la fila
         }
     });
     if (data.id % 2) {
         tr.style.backgroundColor = "#ABB2F6";
+    } else {
+        tr.style.backgroundColor = "#d8d4d4";
     }
     return tbody.appendChild(tr);
 }

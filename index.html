@@ -6,58 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
     <script src="./js/scripts.js" type="module"></script>
     <title>Parcial - Guido Sosa Stillante</title>
 </head>
 
 <body>
 
-        <header>
-            <nav>
-                <img src="./imgs/Logo veterinaria pet shop rustico blanco y negro.png" alt="Logo Empresa" id="logo">
-                <ul class="nav-content">
-                    <li> <a href="./pages/nosotros.html">Nosotros</a> </li>
-                    <li> <a href="./pages/anuncio.html">Anuncio</a> </li>
-                    <li> <a href="./pages/blog.html">Blog</a> </li>
-                    <li> <a href="./pages/contacto.html">Contacto</a> </li>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./imgs/Logo veterinaria pet shop rustico blanco y negro.png" alt="Logo Empresa" id="logo"
+                        class="d-inline-block">
+                </a>
+                <ul class="navbar-expand-lg navbar-light text-center">
+                    <li class="nav-item">
+                        <a class="navbar-text" href="./pages/nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-text" href="./pages/anuncio.html">Anuncio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-text" href="./pages/blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-text" href="./pages/contacto.html">Contacto</a>
+                    </li>
                 </ul>
-            </nav>
-            
-            <section>
-                <div class="container">
-                    <h1 class="titulo">Administracion</h1>
-                    <div class="backgroundImg"></div>
-                </div>
-            </section>
-        </header>
-        
-        <main>
-            <fieldset>
-                <legend>Información del Anuncio</legend>
+            </div>
+        </nav>
+
+        <section>
+            <h1 class="titulo">Administracion</h1>
+            <div class='backgroundImg'></div>
+        </section>
+    </header>
+    
+    <main>
+        <fieldset class="border border-dark rounded">
+            <div class="container">
+                <legend class="text-center">Información del Anuncio</legend>
                 <form>
                     <input type="hidden" name="formId" id="id">
                     
                     <label for="txtTitulo">titulo</label> <br>
-                    <input type="text" id="txtTitulo" name="txtTitulo" placeholder="Ingrese el titulo" required> <br>
+                    <input type="text" id="txtTitulo" name="txtTitulo" placeholder="Ingrese el titulo" class='form-control' required> <br>
                     
                     <label for="sctAnimal">Animal</label> <br> <br>
-                    <label> Perro <input type="radio" name="sctAnimal" value="Perro" checked/></label>
-                    <label> Gato <input type="radio" name="sctAnimal" value="Gato"/></label>
+                    <div class="container text-center">
+                        <label> Perro <input type="radio" name="sctAnimal" value="Perro" checked/></label>
+                        <label> Gato <input type="radio" name="sctAnimal" value="Gato"/></label>
+                    </div>
+                    
 
                     <label for="txtDesc">descripcion</label> <br>
-                    <input type="text" id="txtDesc" name="txtDesc" placeholder="Ingrese la descripcion" required>
+                    <input type="text" id="txtDesc" name="txtDesc" placeholder="Ingrese la descripcion" class='form-control' required>
                     
                     <label for="numPrecio">precio</label> <br>
                     <input type="number" id="numPrecio" name="numPrecio" placeholder="Ingrese el precio" min="1500"
-                    max="100000" value="1500" required>
+                    max="100000" value="1500" class='form-control' required>
                     
                     <div class="icons">
                         <span><img src="./imgs/dogpawprint_89239.png" alt="Icon Raza"></span>
                         <input type="text" name="txtRaza" id="txtRaza" min="2" placeholder="Raza"
-                        class="inputIcon" required>
+                        class="inputIcon" class='form-control' required>
                         
                         <span><img src="./imgs/baby_bottle_outline_icon_139937.png" alt="Icon Nacimiento"></span>
-                        <input type="date" name="txtFecha" id="txtFecha" placeholder="Fecha de nacimiento"  class="inputIcon" required>
+                        <input type="date" name="txtFecha" id="txtFecha" placeholder="Fecha de nacimiento"  class="inputIcon" class='form-control' required>
                         
                         <span><img src="./imgs/health_healthcare_medic_medical_medicine_syringe_vaccine_icon_127255.png" alt="Icon Vacuna"></span>
                         <select name="sctVacuna" id="sctVacuna">
@@ -66,54 +84,135 @@
                         </select>
                     </div>
                     
-                </fieldset>
-                
-                <button type="submit" id="btnSubmit" class="formButtons">
-                    <span><img src="./imgs/source_icons_save-floppy-disk.svg" alt="" id="icon"></span>
-                    Guardar
-                </button>
-                <button type="reset" id="btnCancelar" class="formButtons">
-                    <span><img src="./imgs/source_icons_cancel.svg" alt=""></span>
-                    Cancelar
-                </button>
-                <button type="submit" id="btnActualizar" class="formButtons hidden">
-                    <span><img src="./imgs/source_icons_upload-square-outline.svg" alt=""></span>
-                    Actualizar
-                </button>
-                <button type="button" id="btnEliminar" class="formButtons hidden">
-                    <span><img src="./imgs/source_icons_trash.svg" alt=""></span>
-                    Eliminar
-                </button>
-            </form>
-            
-            <div id="spinner">
-                
+                    </fieldset>
+                    
+                    <button type="submit" id="btnSubmit" class="formButtons">
+                        <span><img src="./imgs/source_icons_save-floppy-disk.svg" alt="" id="icon"></span>
+                        Guardar
+                    </button>
+                    <button type="reset" id="btnCancelar" class="formButtons">
+                        <span><img src="./imgs/source_icons_cancel.svg" alt=""></span>
+                        Cancelar
+                    </button>
+                    <button type="submit" id="btnActualizar" class="formButtons hidden">
+                        <span><img src="./imgs/source_icons_upload-square-outline.svg" alt=""></span>
+                        Actualizar
+                    </button>
+                    <button type="button" id="btnEliminar" class="formButtons hidden">
+                        <span><img src="./imgs/source_icons_trash.svg" alt=""></span>
+                        Eliminar
+                    </button>
+                </form>
             </div>
             
-            <section>
-                <div id="divTabla">
-                    
+        
+        <div id="spinner">
+            
+        </div>
+        
+        <br><br><hr>
+
+        <!-- Filtros -->
+        <div class="container filtro">
+            <div class="row text-center ">
+                <div class="col-5 pt-4 center-block">
+                    <div class="row justify-content-center">
+                        <div class="col">
+                            <select name="selectAnimal" id="sAnimal" class="dark-mode" width="100px">
+                                <option value="Todos">Todos</option>
+                                <option value="Perro">Perro</option>
+                                <option value="Gato">Gato</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-            </section>
+                <div class="col-5">
+                    <label class="col-form-label">Promedio</label>
+                    <div class="pb-3">
+                        <input class="form-control" type="text" id="txtFiltro" value="N/A" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <a href="./pages/mainpage.html" class="mainPage">Ir a la Pagina Principal</a>
-            
-            <footer>
-                <nav>
-                    <img src="./imgs/Logo veterinaria pet shop rustico blanco y negro.png" alt="Logo Empresa" id="logo">
+        <!-- Checkboxs -->
+        <div class="container pt-3 text-center">
+            <div class="row">
+                <div class="container pb-3 text-center">
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="cBoxid">
+                            <input class="cBox form-check-input" type="checkbox" id="cBoxid" checked>Id</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="cBoxtitulo">
+                            <input class="cBox form-check-input" type="checkbox" id="cBoxtitulo" checked>Titulo</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="cBoxAnimal"> 
+                            <input class="cBox form-check-input" type="checkbox" id="cBoxAnimal" checked>Animal</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="cBoxdescripcion"><input class="cBox form-check-input"
+                                type="checkbox" id="cBoxdescripcion" checked>Descripcion</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="cBoxprecio"><input class="cBox form-check-input"
+                                type="checkbox" id="cBoxprecio" checked>Precio</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="cBoxRaza"><input class="cBox form-check-input"
+                                type="checkbox" id="cBoxRaza" checked>Raza</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="cBoxNacimiento"><input class="cBox form-check-input"
+                                type="checkbox" id="cBoxNacimiento" checked>Fecha Nac</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="cBoxVacuna"><input class="cBox form-check-input"
+                                type="checkbox" id="cBoxVacuna" checked>Vacuna</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla -->
+        <section>
+            <div class="container pb-3">
+                <div class="row text-center table-responsive " id="divTabla"></div>
+            </div>            
+        </section>
+
+        <a href="./pages/mainpage.html" class="mainPage">Ir a la Pagina Principal</a>
+        
+        <footer>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="./imgs/Logo veterinaria pet shop rustico blanco y negro.png" alt="Logo Empresa" id="logo"
+                            class="d-inline-block">
+                    </a>
                     <p id="copyright"> <i> Todos nuestros derechos reservados &copy; </i> </p>
-                    <ul>
-                        <li> <a href="./pages/nosotros.html">Nosotros</a> </li>
-                        <li> <a href="./pages/anuncio.html">Anuncio</a> </li>
-                        <li> <a href="./pages/blog.html">Blog</a> </li>
-                        <li> <a href="./pages/contacto.html">Contacto</a> </li>
+                    <ul class="navbar-expand-lg navbar-light text-center">
+                        <li class="nav-item">
+                            <a class="navbar-text" href="./pages/nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-text" href="./pages/anuncio.html">Anuncio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-text" href="./pages/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navbar-text" href="./pages/contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </nav>
-            </footer>
+                </div>
+            </nav>
+        </footer>
             
             
-        </main>
+    </main>
 
-    </body>
-    
-    </html>
+</body>
+
+</html>

@@ -157,6 +157,7 @@ a:hover {
 
 #logo {
   margin: 10px 20px;
+  height: 40px;
 }
 
 #btnSubmit {
@@ -234,4 +235,3 @@ a:hover {
   color: #288d00;
   font-size: 20px;
 }
-

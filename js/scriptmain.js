@@ -1,16 +1,52 @@
-import Anuncio_Mascota from "./anuncioMascota.js"
+import Anuncio_Mascota from "./anuncioMascota.js";
+import { getAnunciosFetchAsync } from "./fetchAsync.js";
 import { getLocalStorageData } from "./localStorage.js";
 
 var localData;
+let article;
 
-window.addEventListener("load", () => {
-    localData = getLocalStorageData(Anuncio_Mascota.getLocalStorage());
-    console.log(localData);
+const URL = "http://localhost:3000/anuncios";
 
-    localData.forEach(item => {
-        createDivs(item);
-    });
-});
+const getDatosAjax = (callback) => {
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState == 4) {
+            if (xhr.status >= 200 && xhr.status < 299) {
+                const datos = JSON.parse(xhr.responseText);
+                callback(datos);
+            } else {
+                const statusText = xhr.statusText || "Ocurrio un error";
+                console.error(`Error: ${xhr.status} : ${statusText}`);
+            }
+        }
+    };
+    xhr.open("GET", URL);
+    xhr.send();
+};
+
+window.addEventListener("load", loadPageHandler());
+
+async function loadPageHandler() {
+    try {           
+         getDatosAjax((datos)=>{
+            localData = datos;            
+            console.log('cargando anuncios', localData);            
+            localData.forEach(item => {
+                createDivs(item);
+            });
+          });        
+    } catch (err) {
+        console.error(err);
+    }
+
+    article = document.querySelector("#articles");    
+    article.classList.add("row");
+    article.classList.add("row-cols-1");
+    article.classList.add("row-cols-md-4");
+    article.classList.add("g-4");
+    article.style.margin = "0.5rem";
+
+}
 
 function createDivs(item) {
     const article = document.querySelector("#articles");

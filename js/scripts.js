@@ -37,7 +37,6 @@ async function loadPageHandler() {
 
     switch(sAnimal.value){
         case 'Todos':
-            e.preventDefault();
             try {
                 agregarSpinner();
                 filtroTodos(await getAnunciosFetchAsync());
@@ -49,7 +48,6 @@ async function loadPageHandler() {
             }
             break;
         case 'Perro':
-            e.preventDefault();
             try {
                 agregarSpinner();
                 filtroPerro(await getAnunciosFetchAsync());
@@ -61,7 +59,6 @@ async function loadPageHandler() {
             }
             break;
         case 'Gato':
-            e.preventDefault();
             try {
                 agregarSpinner();
                 filtroGato(await getAnunciosFetchAsync());
@@ -134,7 +131,7 @@ function filtroTodos(listAux) {
   
 function filtroPerro(listAux) {
     cxBoxs.forEach(el => { el.checked = true; });
-    const anunciosPerro = listAux.filter(an => an.transaccion === 'Perro');
+    const anunciosPerro = listAux.filter(an => an.animal === 'Perro');
     const precios = anunciosPerro.map(an => parseInt(an.precio));
     const totalPrecios = precios.reduce((acc, an) => acc + an, 0);
 
@@ -148,7 +145,7 @@ function filtroPerro(listAux) {
   
 function filtroGato(listAux) {
     cxBoxs.forEach(el => { el.checked = true; });
-    const anunciosGatos = listAux.filter( an => an.transaccion === 'Gato' );
+    const anunciosGatos = listAux.filter( an => an.animal === 'Gato' );
     const precios = anunciosGatos.map( an => parseInt( an.precio ));
     const totalPrecios = precios.reduce( ( acum, val ) => acum + val, 0);
     const resultado = Math.round (totalPrecios / precios.length);
